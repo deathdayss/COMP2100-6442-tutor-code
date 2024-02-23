@@ -16,13 +16,13 @@ public class MacBook extends Computer {
     }
 
     @Override
-    public void loadResult(int dataIndex) {
-        System.out.println("load result");
+    public void saveResult(String data) {
+        System.out.println("save result - 1");
     }
 
     @Override
-    public void saveResult(String data) {
-        System.out.println("save result - 1");
+    public void loadResult(int dataIndex) {
+        System.out.println("load result");
     }
 
     @Override
