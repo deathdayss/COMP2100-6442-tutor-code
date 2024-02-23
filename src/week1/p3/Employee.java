@@ -1,7 +1,7 @@
 package week1.p3;
 
 public abstract class Employee {
-    protected Employer employer;
+    public Employer employer;
     protected Customer[] myCustomers;
 
     public Customer[] getMyCustomers() {

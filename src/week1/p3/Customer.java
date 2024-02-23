@@ -13,7 +13,7 @@ public class Customer {
 
     void complainEmployees() {
         for (int i = 0; i < employees.length; ++i) {
-            System.out.println("complain employee: " + i);
+            System.out.println("complain the employee: " + i + " to " + employees[i].employer);
         }
     }
 }
