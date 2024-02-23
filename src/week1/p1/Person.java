@@ -1,4 +1,4 @@
-package p1;
+package week1.p1;
 
 import java.util.Date;
 

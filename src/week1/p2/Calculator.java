@@ -1,4 +1,4 @@
-package p2;
+package week1.p2;
 
 public interface Calculator {
     int classId = 0;

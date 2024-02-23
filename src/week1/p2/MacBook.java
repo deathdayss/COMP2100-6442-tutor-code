@@ -1,4 +1,4 @@
-package p2;
+package week1.p2;
 
 public class MacBook extends Computer {
     public String macBookModel;
