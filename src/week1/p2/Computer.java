@@ -12,7 +12,7 @@ public abstract class Computer implements Calculator {
     }
 
     @Override
-    public void saveResult() {
+    public void saveResult(String data) {
         System.out.println("save result - 1");
         return;
     }
