@@ -1,4 +1,4 @@
-package week1.p3;
+package umlpatterndesign.p3;
 
 public abstract class Employee {
     public Employer employer;

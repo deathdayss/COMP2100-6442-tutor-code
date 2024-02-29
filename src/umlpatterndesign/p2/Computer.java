@@ -1,4 +1,4 @@
-package week1.p2;
+package umlpatterndesign.p2;
 
 public abstract class Computer implements Calculator {
     public String cpuName;

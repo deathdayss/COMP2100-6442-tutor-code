@@ -1,4 +1,4 @@
-package week1.designpatter.singleton;
+package umlpatterndesign.designpattersample.singleton;
 
 public class SingletonClass {
     private static SingletonClass instance;

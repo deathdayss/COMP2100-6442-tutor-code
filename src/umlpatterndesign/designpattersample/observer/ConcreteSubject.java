@@ -1,4 +1,4 @@
-package week1.designpatter.observer;
+package umlpatterndesign.designpattersample.observer;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package week1.designpatter.factory;
+package umlpatterndesign.designpattersample.factory;
 
 public class MyFactory implements Factory {
 

@@ -1,4 +1,4 @@
-package week1.p2;
+package umlpatterndesign.p2;
 
 public interface Calculator {
     int classId = 0;

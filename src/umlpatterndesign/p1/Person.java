@@ -1,4 +1,4 @@
-package week1.p1;
+package umlpatterndesign.p1;
 
 import java.util.Date;
 
