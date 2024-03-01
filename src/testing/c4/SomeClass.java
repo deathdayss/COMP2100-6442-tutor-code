@@ -11,13 +11,21 @@ public class SomeClass {
 	*  @param b examble boolean input
 	*  @param c examble boolean input
 	*/
-	public static void someMethod(boolean a, boolean b, boolean c) {
+	public static boolean someMethod(boolean a, boolean b, boolean c) {
 		if(a) {
 			a = true;
+			return a;
 		}else { 
 			a = false;
-			if(b) b=true;
+			if(b) {
+				b = true;
+				return b;
+			}
+			return a;
 		}
-		if(c) a=true;
+//		if(c) {
+//			a = true;
+//			return c;
+//		};
 	}
 }

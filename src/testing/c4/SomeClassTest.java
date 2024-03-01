@@ -4,19 +4,20 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.Optional;
+
 public class SomeClassTest {
 
 	@Test
 	public void test() {
 		SomeClass.someMethod(true, true, true);
-		//SomeClass.someMethod(false, true, true);
-		//SomeClass.someMethod(false, false, false);
+		assertEquals( true, SomeClass.someMethod(true, true, true));
 		
-		//SomeClass.someMethod(true, true, false);
-		//SomeClass.someMethod(false, true, false);
-		//SomeClass.someMethod(false, false, true);
-		
-		
+	}
+
+	@Test
+	public void test2() {
+		assertEquals(Optional.of(1), new Integer(1));
 	}
 
 }
