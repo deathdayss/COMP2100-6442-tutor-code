@@ -1,4 +1,4 @@
-package testing.sample;
+package testing.junitsample;
 
 import org.junit.*;
 
