@@ -13,7 +13,7 @@
 git remote add upstream https://github.com/deathdayss/COMP2100-6442-tutor-code   
 ```
 
-7. Execute the below commands sync your master branch with the master branch of the upstream
+7. Execute the below commands sync your master branch with the master branch of the upstream before each class
 ```bash
 git fetch upstream
 git checkout master
