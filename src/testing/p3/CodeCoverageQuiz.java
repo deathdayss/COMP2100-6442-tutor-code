@@ -11,7 +11,7 @@ public class CodeCoverageQuiz {
         }
         for (int i = 0; i < 2; i++) {
             if (a > b) {
-                a++;
+                b++;
             }
             System.out.println(a);
         }
