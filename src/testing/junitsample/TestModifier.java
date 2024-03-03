@@ -11,7 +11,7 @@ public class TestModifier {
 
     @Test(expected = NumberFormatException.class)
     public void testExecptionFail() {
-        System.out.println("testExceptionPass: do nothing");
+        System.out.println("testExceptionFail: do nothing");
     }
 
     @Test(timeout = 1000)
