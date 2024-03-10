@@ -1,6 +1,6 @@
 package tree.bstsample;
 
-public class BinarySearchTreeSample<T extends Comparable> {
+public class BinarySearchTreeSample<T extends Comparable<T>> {
     T value;
     BinarySearchTreeSample<T> leftNode;
     BinarySearchTreeSample<T> rightNode;
@@ -38,10 +38,10 @@ public class BinarySearchTreeSample<T extends Comparable> {
         System.out.print(value + " ");
     }
 
-    public void insert(T value) {
+    public BinarySearchTreeSample<T> insert(T value) {
         if (this.value.compareTo(value) < 0) {
             if (rightNode == null) {
-                rightNode = new BinarySearchTreeSample(value);
+                rightNode = new BinarySearchTreeSample<>(value);
                 rightNode.parentNode = this;
             }
             else {
@@ -50,13 +50,14 @@ public class BinarySearchTreeSample<T extends Comparable> {
         }
         else if (this.value.compareTo(value) > 0)  {
             if (leftNode == null) {
-                leftNode = new BinarySearchTreeSample(value);
+                leftNode = new BinarySearchTreeSample<>(value);
                 leftNode.parentNode = this;
             }
             else {
                 leftNode.insert(value);
             }
         }
+        return this;
     }
 
     // helper function for getSuccessor
@@ -103,100 +104,46 @@ public class BinarySearchTreeSample<T extends Comparable> {
         return parentNode;
     }
 
-    // helper function for delete
-    public BinarySearchTreeSample<T> findNodeByValue(T value) {
+    public BinarySearchTreeSample<T> delete(T value) {
         if (this.value.compareTo(value) < 0) {
             if (rightNode != null) {
-                return rightNode.findNodeByValue(value);
+                rightNode = rightNode.delete(value);
+                if (rightNode != null) {
+                    rightNode.parentNode = this;
+                }
             }
             else {
-                return null;
+                return this;
             }
         }
         else if (this.value.compareTo(value) > 0)  {
             if (leftNode != null) {
-                return leftNode.findNodeByValue(value);
+                leftNode = leftNode.delete(value);
+                if (leftNode != null) {
+                    leftNode.parentNode = this;
+                }
             }
             else {
-                return null;
+                return this;
             }
-        }
-        else {
-            return this;
-        }
-    }
-
-    // helper function for delete
-    public void replaceByNode(boolean isLeft, BinarySearchTreeSample<T> node) {
-        BinarySearchTreeSample<T> replaceNode = isLeft ? leftNode : rightNode;
-        node.leftNode = replaceNode.leftNode;
-        node.rightNode = replaceNode.rightNode;
-        if (isLeft) {
-            leftNode = node;
-        }
-        else {
-            rightNode = node;
-        }
-        node.parentNode = this;
-        replaceNode.parentNode = null;
-    }
-
-    public BinarySearchTreeSample<T> delete(T value) {
-        BinarySearchTreeSample<T> deleteNode = findNodeByValue(value);
-        if (deleteNode == null) {
-            return this;
-        }
-        BinarySearchTreeSample<T> parentNode = deleteNode.parentNode;
-        boolean isLeftChild = true;
-        if (parentNode != null) {
-            isLeftChild = parentNode.leftNode == deleteNode;
         }
         // case 1: no child node
-        if (deleteNode.leftNode == null && deleteNode.rightNode == null) {
-            if (parentNode == null) {
-                return null;
-            }
-            if (isLeftChild) {
-                parentNode.leftNode = null;
-            }
-            else {
-                parentNode.rightNode = null;
-            }
-            deleteNode.parentNode = null;
+        else if (leftNode == null && rightNode == null) {
+            return null;
         }
         // case 2: there is only one child node
-        else if (deleteNode.leftNode == null) {
-            if (parentNode == null) {
-                deleteNode.rightNode.parentNode = null;
-                return deleteNode.rightNode;
-            }
-            BinarySearchTreeSample<T> childNode = deleteNode.rightNode;
-            deleteNode.rightNode = null;
-            parentNode.replaceByNode(isLeftChild, childNode);
+        else if (leftNode == null) {
+            return rightNode;
         }
-        else if (deleteNode.rightNode == null) {
-            if (parentNode == null) {
-                deleteNode.leftNode.parentNode = null;
-                return deleteNode.leftNode;
-            }
-            BinarySearchTreeSample<T> childNode = deleteNode.leftNode;
-            deleteNode.leftNode = null;
-            parentNode.replaceByNode(isLeftChild, childNode);
+        else if (rightNode == null) {
+            return leftNode;
         }
         // case 3: there are two child nodes
-        else {
-            BinarySearchTreeSample<T> successorNode = deleteNode.getSuccessor();
-            successorNode.delete(successorNode.value);
-            if (parentNode == null) {
-                leftNode.parentNode = successorNode;
-                rightNode.parentNode = successorNode;
-                successorNode.leftNode = leftNode;
-                successorNode.rightNode = rightNode;
-                return successorNode;
-            }
-            else  {
-                parentNode.replaceByNode(isLeftChild, successorNode);
-            }
+        else  {
+            BinarySearchTreeSample<T> successorNode = getSuccessor();
+            successorNode.parentNode.delete(successorNode.value);
+            this.value = successorNode.value;
+            return this;
         }
         return this;
     }
