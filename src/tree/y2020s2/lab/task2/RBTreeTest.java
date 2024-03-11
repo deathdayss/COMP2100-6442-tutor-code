@@ -1,4 +1,4 @@
-package tree.lab.task2;
+package tree.y2020s2.lab.task2;
 
 import org.junit.Assert;
 import org.junit.Before;

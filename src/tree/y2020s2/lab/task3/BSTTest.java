@@ -1,4 +1,4 @@
-package tree.lab.task3;
+package tree.y2020s2.lab.task3;
 
 import static org.junit.Assert.*;
 

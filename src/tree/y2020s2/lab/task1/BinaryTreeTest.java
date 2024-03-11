@@ -1,4 +1,4 @@
-package tree.lab.task1;
+package tree.y2020s2.lab.task1;
 
 import java.util.Arrays;
 import java.util.List;

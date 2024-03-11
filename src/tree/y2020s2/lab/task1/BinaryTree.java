@@ -1,4 +1,4 @@
-package tree.lab.task1;
+package tree.y2020s2.lab.task1;
 
 /**
  * BinaryTree - this implements a simple binary search tree for storing a set of

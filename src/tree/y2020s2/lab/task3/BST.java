@@ -1,4 +1,4 @@
-package tree.lab.task3;
+package tree.y2020s2.lab.task3;
 
 /**
 Given a binary search tree and two keys of nodes, implement a method to find the key of the lowest common ancestor 

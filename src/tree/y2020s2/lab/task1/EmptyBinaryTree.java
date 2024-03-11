@@ -1,4 +1,4 @@
-package tree.lab.task1;
+package tree.y2020s2.lab.task1;
 
 /**
  * 
@@ -10,7 +10,7 @@ package tree.lab.task1;
  * @author Huy Pham - Modified to remove unused methods for the purpose of the lab exercise.
  */
 
-public class EmptyBinaryTree <T extends Comparable<T>> extends BinaryTree <T>  {
+public class EmptyBinaryTree <T extends Comparable<T>> extends BinaryTree<T> {
 	
 	public int size() {
 		return 0;
