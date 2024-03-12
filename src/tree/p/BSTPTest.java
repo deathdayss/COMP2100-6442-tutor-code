@@ -31,6 +31,24 @@ public class BSTPTest {
 
     @Test
     public void testInsertion() {
-        assertEquals("5 3 1 4 10 15 13", BSTP.preOrderShow());
+        Assert.assertEquals("5 3 1 4 10 15 13", BSTP.preOrderShow());
+    }
+
+    @Test
+    public void testDeleteNoChild() {
+        BSTP = BSTP.delete(1);
+        Assert.assertEquals("5 3 4 10 15 13", BSTP.preOrderShow());
+    }
+
+    @Test
+    public void testDeleteOneChild() {
+        BSTP = BSTP.delete(10);
+        Assert.assertEquals("5 3 1 4 15 13", BSTP.preOrderShow());
+    }
+
+    @Test
+    public void testDeleteTwoChildren() {
+        BSTP = BSTP.delete(5);
+        Assert.assertEquals("10 3 1 4 15 13", BSTP.preOrderShow());
     }
 }
