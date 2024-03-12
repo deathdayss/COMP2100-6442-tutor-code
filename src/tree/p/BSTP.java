@@ -14,7 +14,9 @@ public class BSTP<T extends Comparable<T>> {
         return null;
     }
 
-    // TODO:
+    // TODO: BST Delete - Practice
+    // you can change the "return null" to return other value
+    // hint: you need to use helper functions "find and delete successor" to finish this method
     public BSTP<T> delete(T value) {
         return null;
     }
