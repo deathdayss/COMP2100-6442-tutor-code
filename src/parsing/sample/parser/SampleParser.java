@@ -2,7 +2,7 @@ package parsing.sample.parser;
 
 import parsing.sample.tokenization.SampleTokenizer;
 
-// EXP => INT + EXP | INT
+// <exp> => <int> + <exp> | <int>
 public class SampleParser {
     SampleTokenizer _tokenizer;
 
