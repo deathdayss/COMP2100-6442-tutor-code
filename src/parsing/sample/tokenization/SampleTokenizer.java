@@ -33,6 +33,8 @@ public class SampleTokenizer {
         // tokenization process
         if (_buffer.charAt(0) == '+') {
             currentToken = new SampleToken("+", SampleToken.Type.ADD);
+        } else if (_buffer.charAt(0) == '*') {
+            currentToken = new SampleToken("*", SampleToken.Type.MUL);
         } else {
             int i = 1;
             while (i < _buffer.length()) {

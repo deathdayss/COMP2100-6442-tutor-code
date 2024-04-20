@@ -2,7 +2,7 @@ package parsing.sample.tokenization;
 
 
 public class SampleToken {
-    public enum Type {INT, ADD};
+    public enum Type {INT, ADD, MUL};
     private String _token = "";
     private Type _type = Type.INT;
 
