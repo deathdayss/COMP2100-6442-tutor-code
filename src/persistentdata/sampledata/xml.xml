@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<people>
+    <person id="1">
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+        <age>33</age>
+        <hobbyList>
+            <hobby>reading</hobby>
+            <hobby>cooking</hobby>
+            <hobby>basketball</hobby>
+            <hobby>swimming</hobby>
+        </hobbyList>
+    </person>
+    <person id="2">
+        <firstName>Adam</firstName>
+        <lastName>White</lastName>
+        <age>25</age>
+        <hobbyList>
+            <hobby>fishing</hobby>
+            <hobby>hiking</hobby>
+        </hobbyList>
+    </person>
+</people>

@@ -33,7 +33,6 @@ public class SampleParser {
         if (_tokenizer.current().token().equals("*")) {
             _tokenizer.next();
             SampleExp exp = parseExp();
-            System.out.println("MUL: " + intExp.show() + "--" + exp.show());
             return new SampleMulExp(intExp, exp);
         }
         return intExp;
