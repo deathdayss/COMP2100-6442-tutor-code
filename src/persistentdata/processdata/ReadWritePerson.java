@@ -25,6 +25,7 @@ public class ReadWritePerson {
     public static Person readPersonFromBespokeById(int id, String fileName, String fileName2) {
         BufferedReader reader = null;
         try {
+            // read the person data
             reader = new BufferedReader(new FileReader("src/persistentdata/sampledata/" + fileName));
             Person person = null;
             String line;
@@ -36,6 +37,7 @@ public class ReadWritePerson {
                     break;
                 }
             }
+            // read the hobby data
             BufferedReader hobbiesReader = new BufferedReader(new FileReader("src/persistentdata/sampledata/" + fileName2));
             String hobbyLine;
             while ((hobbyLine = hobbiesReader.readLine()) != null) {
