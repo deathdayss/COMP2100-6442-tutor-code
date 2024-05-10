@@ -19,8 +19,6 @@ public class StringUtil {
 		for (int cIdx = 1 ; cIdx < argStr.length(); cIdx++)
 		{
 			char cur = argStr.charAt(cIdx);
-//			System.out.println("cur: " + cur);
-//			System.out.println("last: " + last);
 			if(cur!='\n') {
 				argBuf.append(cur);
 			}else {
