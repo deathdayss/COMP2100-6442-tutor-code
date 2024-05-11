@@ -25,7 +25,7 @@ public class BST {
 	public Boolean find(int value) {
 
 		// start your code
-		return root.find(value);
+		return false;
 		// end your code
 	}
 
@@ -42,7 +42,7 @@ public class BST {
 	public void delete(int value) {
 
 		// start your code
-		root.delete(value);
+
 		// end your code
 	}
 
@@ -73,98 +73,6 @@ public class BST {
 			this.parent = null;
 			this.left = null;
 			this.right = null;
-		}
-
-		public boolean find(Integer target) {
-			if (value == target) {
-				return true;
-			}
-			else if (target > value) {
-				if (right != null) {
-					return right.find(target);
-				}
-				else {
-					return false;
-				}
-			}
-			else {
-				if (left != null) {
-					return left.find(target);
-				}
-				else {
-					return false;
-				}
-			}
-		}
-
-		public boolean delete(Integer target) {
-			if (target != value) {
-				if (left != null) {
-					if (left.delete(target)) {
-						return true;
-					}
-				}
-				if (right != null) {
-					return right.delete(target);
-				}
-				return false;
-			}
-			if (right == null && left == null) {
-				if (parent.left == this) {
-					parent.left = null;
-				}
-				else {
-					parent.right = null;
-				}
-				return true;
-			}
-			else if (right != null && left != null) {
-				Node successor = minimumNode();
-				Integer assignValue = successor.value;
-				successor.delete(assignValue);
-				value = assignValue;
-				return true;
-			}
-			else {
-				if (right != null) {
-					if (parent.left == this) {
-						parent.left = right;
-					}
-					else {
-						parent.right = right;
-					}
-				}
-				else {
-					if (parent.left == this) {
-						parent.left = left;
-					}
-					else {
-						parent.right = left;
-					}
-				}
-				return true;
-			}
-		}
-
-//		public Node findSuccessor() {
-//			if (right != null) {
-//				return minimumNode();
-//			}
-//			Node x = this;
-//			Node y = parent;
-//			while (y != null && x == y.right) {
-//				x = y;
-//				y = x.parent;
-//			}
-//			return x;
-//		}
-
-		public Node minimumNode() {
-			Node n = right;
-			while (n.left != null) {
-				n = n.left;
-			}
-			return n;
 		}
 	}
 
