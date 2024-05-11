@@ -17,7 +17,6 @@ public class MyInteger {
 			}
 
 		}
-		System.out.println("if 4");
 		return num;
 	}
 

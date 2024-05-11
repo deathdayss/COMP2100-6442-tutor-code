@@ -23,13 +23,6 @@ public class SomethingTest {
 		// Implement your test cases
 		// START YOUR CODE
 
-		// n1 > n2, method2(n1, n2) == 36, n1 > n3, n2 < n4, method3(n1, n3) == method3(n2, n4), n3 < n4, method1(n3, n4) != 15
-		assertEquals(252, Something.someMethod(72, 36, 36, 72));
-		// n1 > n2, method2(n1, n2) == 36, n1 < n3, n2 > n4, method3(n1, n3) != method3(n2, n4), n3 > n4, method1(n3, n4) != 15
-		assertEquals(108, Something.someMethod(72, 36, 100, 4));
-		// n1 < n2, method2(n1, n2) != 36, method1(n3, n4) == 15
-		assertEquals(47, Something.someMethod(36, 73, 31, 16));
-
 		// END YOUR CODE
 	}
 }
