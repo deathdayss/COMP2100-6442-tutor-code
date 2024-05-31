@@ -17,10 +17,4 @@ public class Application {
 
         // ########## YOUR CODE ENDS HERE ##########
     }
-
-    public static void main(String[] args) {
-        Application application = new Application();
-        RBTree<Integer, Person> tree = application.createTree();
-        application.saveXML(tree);
-    }
 }
