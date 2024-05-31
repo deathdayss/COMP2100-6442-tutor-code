@@ -284,6 +284,9 @@ public class ThreeColourTree<T extends Comparable<T>> {
 				if (colour == Colour.MAGENTA) {
 					return left.colour != Colour.MAGENTA && right.colour != Colour.MAGENTA && (left.colour == Colour.PURPLE || right.colour == Colour.PURPLE);
 				}
+				else {
+					return left.testProp4() && right.testProp4();
+				}
 			}
 			return true;
 		}
