@@ -10,7 +10,6 @@ public class Tokenizer {
     
     public Tokenizer(String buffer) {
         this._buffer = buffer;
-        System.out.println(buffer);
     }
     
     /**
@@ -41,9 +40,7 @@ public class Tokenizer {
      */
     public Token takeNext() {
         // TODO: Add your implementation here.
-        Token next = next();
-        _buffer = _buffer.substring(next.originalTokenStr.length() + 1);
-        return next;
+        return null;
     }
 
     /**
@@ -51,7 +48,7 @@ public class Tokenizer {
      */
     public boolean hasNext() {
         // TODO: Add your implementation here.
-        return _buffer.length() > 0;
+        return true;
     }
    
 }
