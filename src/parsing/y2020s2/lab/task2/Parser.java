@@ -49,11 +49,4 @@ public class Parser {
         return null;
         // ########## YOUR CODE ENDS HERE ##########
     }
-
-    public static void main(String[] args) {
-        MyTokenizer mathTokenizer = new MyTokenizer("2+1");
-        Exp t1 = new Parser(mathTokenizer).parseExp();
-        System.out.println(t1.show());
-        System.out.println(t1.evaluate());
-    }
 }
